@@ -1,36 +1,10 @@
 {
-  "version": 2,
-  "name": "web3-landing",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "about.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "services.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "faq.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "privacy.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "terms.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "build": {
+    // Никаких сборочных команд не требуется, весь статик уже лежит в output/
+    "command": "",
+    // Папка, из которой Railway будет отдавать файлы
+    "publish": "output"
+  },
   "routes": [
     {
       "src": "/about/?",
