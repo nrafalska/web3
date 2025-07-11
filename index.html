@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>
     
-      
+      Montreal Wealth
     
   </title>
   <meta name="description"
@@ -17,14 +17,20 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Custom styles -->
+  <!-- Your custom styles -->
   <link rel="stylesheet" href="assets/styles.css">
 
   <style>
-    /* Отступ под фиксированную шапку для всего контента */
+    /* push content below fixed navbar */
     body { padding-top: 70px; }
     .announcement-bar { background: #ffeb3b; }
     .footer-grid { background: #212121; color: #f1f1f1; }
+
+    /* only shift hero under the navbar */
+    #hero {
+      margin-top: -70px;
+      padding-top: 70px;
+    }
   </style>
 </head>
 <body>
@@ -34,13 +40,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
          style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height: 1.2;">
-          <span class="fs-4 fw-bold text-light" style="letter-spacing: 0.5px;">
-            
-          </span>
-          <small class="text-muted" style="font-size: 0.8rem;">
-            .com
-          </small>
+        <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height:1.2">
+          <span class="fs-4 fw-bold text-light">Montreal Wealth</span>
+          <small class="text-muted" style="font-size:0.8rem">montrealwealth.com</small>
         </a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -50,13 +52,27 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
-            <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="privacy.html">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="terms.html">Terms</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -66,13 +82,13 @@
   <!-- ANNOUNCEMENT BAR -->
   
 
-  
+  <!-- HERO only on homepage -->
   
     ﻿<section id="hero"
   style="
     width: 100vw;
     min-height: 520px;
-    background: linear-gradient(120deg, rgba(22,38,47,0.67),rgba(22,38,47,0.44)), url('images/invest/hero_invest_graph.png');
+    background: linear-gradient(120deg, rgba(22,38,47,0.67),rgba(22,38,47,0.44)), url('images/gambling/hero_gambling_slot.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,15 +108,15 @@
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
-        <h1 class="display-4 fw-bold mb-3" style="color:#03e9f4; text-shadow:0 2px 16px #000b;">
-          Invest Smartly in the gb Market
+        <h1 class="display-4 fw-bold mb-3" style="color:#FF005C; text-shadow:0 2px 16px #000b;">
+          Get Your First Bonus Now!
         </h1>
         <p class="lead mb-4" style="color:#fff; text-shadow:0 2px 12px #000b; font-size:1.38em;">
-          Grow your wealth with safe and profitable strategies from  in .
+          Register today and double your deposit instantly at Montreal Wealth.
         </p>
         <a href="#contact"
           class="btn btn-lg btn-primary px-5 py-3"
-          style="font-weight:700; background:#03e9f4; border:none; box-shadow:0 2px 12px #0003;">
+          style="font-weight:700; background:#FF005C; border:none; box-shadow:0 2px 12px #0003;">
           Contact Us
         </a>
       </div>
@@ -120,14 +136,12 @@
     
       ﻿<section id="about_us" style="background: ; color: #fff; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2.2rem; margin-top:0.6em;">About Us</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color: #FF005C; font-size:2.2rem; margin-top:0.6em;">About Us</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
         
-          <img src="images/invest/about_invest_coins.png" class="img-fluid rounded-4 mb-4 shadow" alt="About Us" loading="lazy">
-        
         <div class="fs-5" style="background:rgba(0,0,0,0.10); border-radius:11px; padding:1.2em 1.6em;">
-          ['We provide expert financial advice and investment strategies to help you achieve your financial goals in the gb stock market.', 'Our team consists of certified advisors and analysts with decades of experience in regulated markets across gb.', 'We are dedicated to delivering tailored portfolio management and ongoing support for every client of  in , gb.']
+          ['The top Canada casino with instant bonuses, daily jackpots and 24/7 customer support.', 'We offer a secure, fair and exciting gaming experience with the best slots and live games in Canada.', 'Our team ensures fast payouts, exclusive tournaments and VIP rewards for every player at Montreal Wealth.']
         </div>
       </div>
     </div>
@@ -135,17 +149,17 @@
 </section>
       ﻿<section id="services" style="background: ; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2rem;">Our Services</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color: #FF005C; font-size:2rem;">Our Services</h2>
     
-      <img src="images/invest/service_invest_phone.png" class="img-fluid rounded-4 mb-4 shadow" alt="Services" loading="lazy">
+      <img src="images/gambling/service_gambling_app.png" class="img-fluid rounded-4 mb-4 shadow" alt="Services" loading="lazy">
     
     <div class="row g-4 justify-content-center">
       
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Tax Optimization</div>
-              <div class="text-light" style="font-size:1.07rem;">Reduce tax burdens with our professional guidance.</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Slots & Casino</div>
+              <div class="text-light" style="font-size:1.07rem;">Play 5000+ certified slot machines and table games.</div>
             </div>
           </div>
         </div>
@@ -153,8 +167,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Retirement Planning</div>
-              <div class="text-light" style="font-size:1.07rem;">Build a future-proof retirement plan in gb.</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Live Dealer</div>
+              <div class="text-light" style="font-size:1.07rem;">Interact with real dealers for the ultimate casino feel.</div>
             </div>
           </div>
         </div>
@@ -162,8 +176,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Market Analytics</div>
-              <div class="text-light" style="font-size:1.07rem;">Get exclusive insights from our research team.</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Jackpot Tournaments</div>
+              <div class="text-light" style="font-size:1.07rem;">Daily competitions with huge prizes.</div>
             </div>
           </div>
         </div>
@@ -173,25 +187,25 @@
 </section>
       ﻿<section id="advantages" style="background: ; color: #222; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2.2rem; margin-top:0.6em;">Advantages</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color: #FF005C; font-size:2.2rem; margin-top:0.6em;">Advantages</h2>
     <div class="row g-4 justify-content-center">
       
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Transparent Fee Structure
+              Generous Bonuses
             </div>
           </div>
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Real-Time Analytics
+              VIP Club
             </div>
           </div>
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Fully Regulated by FCA (gb)
+              Instant Payouts
             </div>
           </div>
         
@@ -201,15 +215,15 @@
 </section>
       ﻿<section id="testimonials" style="background: ; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2rem;">Testimonials</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color: #FF005C; font-size:2rem;">Testimonials</h2>
     <div class="row justify-content-center g-4">
       
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Sophie Graham</div>
-              <div style="font-size:1.05rem;">My advisor at  was patient and always available.</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Sonia F.</div>
+              <div style="font-size:1.05rem;">VIP program has amazing rewards at Montreal Wealth.</div>
             </div>
           </div>
         </div>
@@ -218,8 +232,8 @@
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Thomas Reid</div>
-              <div style="font-size:1.05rem;">Professional service and impressive returns — highly recommend  in !</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Marc T.</div>
+              <div style="font-size:1.05rem;">I won my first jackpot within two days at Montreal Wealth!</div>
             </div>
           </div>
         </div>
@@ -228,8 +242,8 @@
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Laura Stevens</div>
-              <div style="font-size:1.05rem;">Clear onboarding, transparent fees, and great support in gb.</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Robert P.</div>
+              <div style="font-size:1.05rem;">The live casino at Montreal Wealth is top quality and support is always online.</div>
             </div>
           </div>
         </div>
@@ -238,8 +252,8 @@
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">James Patel</div>
-              <div style="font-size:1.05rem;">Corporate investment made simple and profitable by .</div>
+              <div class="fw-semibold mb-2" style="color:#FF005C; font-size:1.14rem;">Janet K.</div>
+              <div style="font-size:1.05rem;">Fast withdrawals and lots of new games every week in Canada.</div>
             </div>
           </div>
         </div>
@@ -249,34 +263,34 @@
 </section>
       ﻿<section id="faq" style="background: ; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2rem;">FAQ</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color: #FF005C; font-size:2rem;">FAQ</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <ul class="list-unstyled fs-5">
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
-              <b style="color:#03e9f4">Q:</b> What is the minimum investment?<br>
-              <b>A:</b> From £5,000 for standard accounts at , £20,000 for managed portfolios.
+              <b style="color:#FF005C">Q:</b> How do I claim my bonus?<br>
+              <b>A:</b> Register and your bonus will be credited instantly at Montreal Wealth.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
-              <b style="color:#03e9f4">Q:</b> Are your services regulated?<br>
-              <b>A:</b> Yes, fully FCA-compliant in gb.
+              <b style="color:#FF005C">Q:</b> Are the games fair?<br>
+              <b>A:</b> All games are certified and regularly tested in Canada.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
-              <b style="color:#03e9f4">Q:</b> Can I withdraw funds anytime?<br>
-              <b>A:</b> Yes, subject to account terms with .
+              <b style="color:#FF005C">Q:</b> How fast are payouts?<br>
+              <b>A:</b> Most withdrawals are processed within 1 hour by Montreal Wealth.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
-              <b style="color:#03e9f4">Q:</b> How do I start?<br>
-              <b>A:</b> Just sign up and verify your identity in gb.
+              <b style="color:#FF005C">Q:</b> Can I play on mobile?<br>
+              <b>A:</b> Yes, our site is mobile-friendly in Canada.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
-              <b style="color:#03e9f4">Q:</b> Is my data safe?<br>
-              <b>A:</b> We use bank-grade encryption and strict privacy policies at .
+              <b style="color:#FF005C">Q:</b> Is customer support available 24/7?<br>
+              <b>A:</b> Absolutely, we’re here any time at Montreal Wealth.
             </li>
           
         </ul>
@@ -286,14 +300,14 @@
 </section>
       ﻿<section id="news" style="background: ; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2rem;">News</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color: #FF005C; font-size:2rem;">News</h2>
     <div class="row g-4 justify-content-center">
       
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">ISA Tax Changes Announced</b>
-              <div class="text-light" style="font-size:1.07rem;">Government adjusts savings account rules for 2024 in gb.</div>
+              <b class="d-block mb-2" style="color:#FF005C;">Mobile App Update</b>
+              <div class="text-light" style="font-size:1.07rem;">Enhanced user experience and instant game loading from Montreal Wealth.</div>
             </div>
           </div>
         </div>
@@ -301,8 +315,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">New Investment App Launches</b>
-              <div class="text-light" style="font-size:1.07rem;">The latest fintech tool in gb makes investing simpler than ever.</div>
+              <b class="d-block mb-2" style="color:#FF005C;">VIP Tournament Announced</b>
+              <div class="text-light" style="font-size:1.07rem;">Exclusive tournament for top players this weekend at Montreal Wealth.</div>
             </div>
           </div>
         </div>
@@ -310,8 +324,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">ESG Investments on the Rise</b>
-              <div class="text-light" style="font-size:1.07rem;">Green portfolios gain traction among gb investors.</div>
+              <b class="d-block mb-2" style="color:#FF005C;">Biggest Jackpot Winner This Year!</b>
+              <div class="text-light" style="font-size:1.07rem;">Player wins £250,000 in Mega Spin slot at Montreal Wealth.</div>
             </div>
           </div>
         </div>
@@ -319,8 +333,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">Tech Stocks Surge in </b>
-              <div class="text-light" style="font-size:1.07rem;"> technology sector outperforms all other indices this month.</div>
+              <b class="d-block mb-2" style="color:#FF005C;">Record Payouts in April</b>
+              <div class="text-light" style="font-size:1.07rem;">Canada casino members win over £2 million in one month.</div>
             </div>
           </div>
         </div>
@@ -330,7 +344,7 @@
 </section>
       <section id="contact" style="background:#f6f8fa; padding:3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color:#03e9f4; font-size:2.1rem;">Contact Us</h2>
+    <h2 class="text-center mb-4 fw-bold" style="color:#FF005C; font-size:2.1rem;">Contact Us</h2>
     <div class="row g-4 justify-content-center align-items-stretch">
       <div class="col-md-6">
         <form class="bg-white rounded-4 shadow-sm p-4 h-100">
@@ -346,19 +360,19 @@
             <label class="form-label fw-semibold">Email</label>
             <input type="email" class="form-control" placeholder="Enter your email address">
           </div>
-          <button type="submit" class="btn btn-lg w-100" style="background:#03e9f4; color:#fff; font-weight:600;">Send</button>
+          <button type="submit" class="btn btn-lg w-100" style="background:#FF005C; color:#fff; font-weight:600;">Send</button>
         </form>
       </div>
       <div class="col-md-6">
         <div class="bg-white rounded-4 shadow-sm p-4 h-100">
-          <div class="fw-bold mb-2" style="font-size:1.17rem;"></div>
+          <div class="fw-bold mb-2" style="font-size:1.17rem;">Montreal Wealth</div>
           <div class="mb-3" style="font-size:1.08rem;">
-            <span>📍 </span><br>
-            <span>📞 </span><br>
-            <span>✉️ </span>
+            <span>📍 Rue Sainte-Catherine, Montreal, QC</span><br>
+            <span>📞 +1 514 2345678</span><br>
+            <span>✉️ hello@montrealwealth.ca</span>
           </div>
           <iframe 
-            src="https://www.google.com/maps?q=&output=embed"
+            src="https://www.google.com/maps?q=Rue%20Sainte-Catherine%2C%20Montreal%2C%20QC&output=embed"
             width="100%" height="145" style="border-radius:10px; border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
@@ -374,9 +388,19 @@
     <div class="container">
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
-          <h5 class="text-light"></h5>
+          <h5 class="text-light">Montreal Wealth</h5>
+          <p class="text-light small">montrealwealth.com</p>
+          
+            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>Rue Sainte-Catherine, Montreal, QC</p>
           
           
+            <p class="text-light"><i class="fa fa-phone me-2"></i>+1 514 2345678</p>
+          
+          
+            <p class="text-light">
+              <i class="fa fa-envelope me-2"></i>
+              <a href="mailto:hello@montrealwealth.ca" class="text-light">hello@montrealwealth.ca</a>
+            </p>
           
         </div>
         <div class="col-md-4">
@@ -398,13 +422,12 @@
         </div>
       </div>
       <div class="text-center text-light mt-4">
-        © 2025 . All rights reserved.
+        © 2025 Montreal Wealth — montrealwealth.com. All rights reserved.
       </div>
     </div>
   </footer>
 
-  
-  <!-- Privacy Modal -->
+  <!-- PRIVACY MODAL -->
   <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -419,7 +442,7 @@
     </div>
   </div>
 
-  <!-- Terms Modal -->
+  <!-- TERMS MODAL -->
   <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -434,7 +457,7 @@
     </div>
   </div>
 
-  <!-- Cookie Modal -->
+  <!-- COOKIE POLICY MODAL -->
   <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -449,9 +472,10 @@
     </div>
   </div>
 
-  <!-- Cookie Consent Banner -->
-  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded" style="display:none; max-width:320px;">
-    <strong>We use cookies.</strong>
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded"
+       style="display:none; max-width:320px; z-index:1055;">
+    <strong>We use cookies.</strong><br>
     <small>This website uses cookies to ensure you get the best experience.</small>
     <button id="cookieAcceptBtn" class="btn btn-sm btn-primary ms-2">Accept</button>
   </div>
@@ -459,11 +483,13 @@
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', ()=> {
+    document.addEventListener('DOMContentLoaded', () => {
       const banner = document.getElementById('cookieConsent');
-      if (!localStorage.getItem('cookieConsent')) banner.style.display = 'block';
+      if (!localStorage.getItem('cookieConsent')) {
+        banner.style.display = 'block';
+      }
       document.getElementById('cookieAcceptBtn').onclick = () => {
-        localStorage.setItem('cookieConsent','yes');
+        localStorage.setItem('cookieConsent', 'yes');
         banner.style.display = 'none';
       };
     });
