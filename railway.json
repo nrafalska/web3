@@ -1,37 +1,35 @@
 {
   "build": {
-    // Никаких сборочных команд не требуется, весь статик уже лежит в output/
     "command": "",
-    // Папка, из которой Railway будет отдавать файлы
     "publish": "output"
   },
   "routes": [
     {
-      "src": "/about/?",
+      "src": "^/about/?$",
       "dest": "/about.html"
     },
     {
-      "src": "/services/?",
+      "src": "^/services/?$",
       "dest": "/services.html"
     },
     {
-      "src": "/blog/?",
+      "src": "^/blog/?$",
       "dest": "/blog.html"
     },
     {
-      "src": "/faq/?",
+      "src": "^/faq/?$",
       "dest": "/faq.html"
     },
     {
-      "src": "/privacy/?",
+      "src": "^/privacy/?$",
       "dest": "/privacy.html"
     },
     {
-      "src": "/terms/?",
+      "src": "^/terms/?$",
       "dest": "/terms.html"
     },
     {
-      "src": "/(.*)",
+      "src": "^/(.*)$",
       "dest": "/index.html"
     }
   ]
