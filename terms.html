@@ -1,4 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    
+      Terms of Service | 
+    
+  </title>
+  <meta name="description"
+        content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <style>
+    /* push content below fixed navbar */
+    body { padding-top: 70px; }
+    .announcement-bar { background: #ffeb3b; }
+    .footer-grid { background: #212121; color: #f1f1f1; }
+
+    /* only shift hero under the navbar */
+    #hero {
+      margin-top: -70px;
+      padding-top: 70px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
+         style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height:1.2">
+          <span class="fs-4 fw-bold text-light"></span>
+          <small class="text-muted" style="font-size:0.8rem">.com</small>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="privacy.html">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="terms.html">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ANNOUNCEMENT BAR -->
+  
+
+  <!-- HERO only on homepage -->
+  
+
+  <!-- MAIN CONTENT -->
+  <main class="container-fluid px-0">
+    
+      
 <section class="section terms bg-white">
   <div class="container">
     <!-- Page header -->
@@ -144,3 +234,112 @@
     </footer>
   </div>
 </section>
+
+    
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-grid py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <h5 class="text-light"></h5>
+          <p class="text-light small">.com</p>
+          
+          
+          
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-light">About</a></li>
+            <li><a href="services.html" class="text-light">Services</a></li>
+            <li><a href="blog.html" class="text-light">Blog</a></li>
+            <li><a href="faq.html" class="text-light">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
+            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a></li>
+            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center text-light mt-4">
+        © 2025  — .com. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRIVACY MODAL -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Privacy Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="white-space: pre-wrap;">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS MODAL -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Terms of Service</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="white-space: pre-wrap;">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE POLICY MODAL -->
+  <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cookie Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          We use cookies for analytics and a better user experience. By continuing to use this site, you accept our use of cookies.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded"
+       style="display:none; max-width:320px; z-index:1055;">
+    <strong>We use cookies.</strong><br>
+    <small>This website uses cookies to ensure you get the best experience.</small>
+    <button id="cookieAcceptBtn" class="btn btn-sm btn-primary ms-2">Accept</button>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const banner = document.getElementById('cookieConsent');
+      if (!localStorage.getItem('cookieConsent')) {
+        banner.style.display = 'block';
+      }
+      document.getElementById('cookieAcceptBtn').onclick = () => {
+        localStorage.setItem('cookieConsent', 'yes');
+        banner.style.display = 'none';
+      };
+    });
+  </script>
+</body>
+</html>
