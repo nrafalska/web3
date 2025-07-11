@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>
     
-      Services | Pacific Invest
+      Services | NY Capital
     
   </title>
   <meta name="description"
@@ -20,32 +20,35 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="assets/styles.css">
 
+  <!-- Override for navbar offset, announcement-bar и footer -->
   <style>
-    /* Чтобы якоря (anchor links) не уезжали под шапку */
-    html { scroll-padding-top: 70px; }
-    /* Отступ контента, чтобы он не скрывался за fixed-top шапкой */
-    body { padding-top: 70px; }
-    /* На главной убираем этот отступ, чтобы Hero прилегал впритык к шапке */
-    body.no-top-padding { padding-top: 0; }
-
-    .announcement-bar { background: #ffeb3b; }
-    .footer-grid { background: #212121; color: #f1f1f1; }
+    body {
+      padding-top: 70px; /* отступ под фиксированный navbar */
+    }
+    .announcement-bar {
+      background: #ffeb3b;
+    }
+    .footer-grid {
+      background: #212121;
+      color: #f1f1f1;
+    }
+    /* Убираем внутренний отступ над первым section на не-главных страницах */
+    main > section:first-child {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
   </style>
 </head>
-<body class="">
+<body>
 
   <!-- HEADER -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
          style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex flex-column" href="/index.html" style="line-height: 1.2;">
-          <span class="fs-4 fw-bold text-light" style="letter-spacing: 0.5px;">
-            Pacific Invest
-          </span>
-          <small class="text-muted" style="font-size: 0.8rem;">
-            pacificinvest.com
-          </small>
+        <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height: 1.2;">
+          <span class="fs-4 fw-bold text-light" style="letter-spacing: 0.5px;">NY Capital</span>
+          <small class="text-muted" style="font-size: 0.8rem;">nycapital.com</small>
         </a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -55,13 +58,13 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="/privacy.html">Privacy</a></li>
-            <li class="nav-item"><a class="nav-link" href="/terms.html">Terms</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
           </ul>
         </div>
       </div>
@@ -78,9 +81,9 @@
 <section id="services-invest" class="section services bg-white py-5">
   <div class="container">
     <header class="section-header text-center mb-5">
-      <h1 class="display-4">Pacific Invest – Investment Services</h1>
+      <h1 class="display-4">NY Capital – Investment Services</h1>
       <p class="lead">
-        Tailored investment products leveraging modern portfolio theory and AI-driven analytics on pacificinvest.com.
+        Tailored investment products leveraging modern portfolio theory and AI-driven analytics on nycapital.com.
       </p>
     </header>
 
@@ -115,26 +118,26 @@
     <div class="container">
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
-          <h5 class="text-light">Pacific Invest</h5>
+          <h5 class="text-light">NY Capital</h5>
           
-            <p><i class="fa fa-map-marker-alt me-2 text-light"></i><span class="text-light">500 Fifth Ave, New York, NY</span></p>
+            <p><i class="fa fa-map-marker-alt me-2 text-light"></i><span class="text-light">456 Market St, San Francisco, CA</span></p>
           
           
-            <p><i class="fa fa-phone me-2 text-light"></i><span class="text-light">+1 212 555 6789</span></p>
+            <p><i class="fa fa-phone me-2 text-light"></i><span class="text-light">+1 415 555 5678</span></p>
           
           
             <p><i class="fa fa-envelope me-2 text-light"></i>
-              <a href="mailto:support@pacificinvest.com" class="text-light">support@pacificinvest.com</a>
+              <a href="mailto:hello@nycapital.com" class="text-light">hello@nycapital.com</a>
             </p>
           
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Menu</h5>
           <ul class="list-unstyled">
-            <li><a href="/about.html" class="text-light">About</a></li>
-            <li><a href="/services.html" class="text-light">Services</a></li>
-            <li><a href="/blog.html" class="text-light">Blog</a></li>
-            <li><a href="/faq.html" class="text-light">FAQ</a></li>
+            <li><a href="about.html" class="text-light">About</a></li>
+            <li><a href="services.html" class="text-light">Services</a></li>
+            <li><a href="blog.html" class="text-light">Blog</a></li>
+            <li><a href="faq.html" class="text-light">FAQ</a></li>
           </ul>
         </div>
         <div class="col-md-4">
@@ -147,7 +150,7 @@
         </div>
       </div>
       <div class="text-center text-light mt-4">
-        © 2025 Pacific Invest. All rights reserved.
+        © 2025 NY Capital. All rights reserved.
       </div>
     </div>
   </footer>
@@ -181,8 +184,7 @@
     </div>
   </div>
 
-  <!-- COOKIE CONSENT BANNER -->
-  <div id="cookieModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -196,7 +198,9 @@
     </div>
   </div>
 
-  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded" style="display:none; max-width:320px;">
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded"
+       style="display:none; max-width:320px;">
     <strong>We use cookies.</strong>
     <small>This website uses cookies to ensure you get the best experience.</small>
     <button id="cookieAcceptBtn" class="btn btn-sm btn-primary ms-2">Accept</button>

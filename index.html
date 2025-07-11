@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>
     
-      Pacific Invest
+      NY Capital
     
   </title>
   <meta name="description"
@@ -20,32 +20,35 @@
   <!-- Custom styles -->
   <link rel="stylesheet" href="assets/styles.css">
 
+  <!-- Override for navbar offset, announcement-bar и footer -->
   <style>
-    /* Чтобы якоря (anchor links) не уезжали под шапку */
-    html { scroll-padding-top: 70px; }
-    /* Отступ контента, чтобы он не скрывался за fixed-top шапкой */
-    body { padding-top: 70px; }
-    /* На главной убираем этот отступ, чтобы Hero прилегал впритык к шапке */
-    body.no-top-padding { padding-top: 0; }
-
-    .announcement-bar { background: #ffeb3b; }
-    .footer-grid { background: #212121; color: #f1f1f1; }
+    body {
+      padding-top: 70px; /* отступ под фиксированный navbar */
+    }
+    .announcement-bar {
+      background: #ffeb3b;
+    }
+    .footer-grid {
+      background: #212121;
+      color: #f1f1f1;
+    }
+    /* Убираем внутренний отступ над первым section на не-главных страницах */
+    main > section:first-child {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
   </style>
 </head>
-<body class="no-top-padding">
+<body>
 
   <!-- HEADER -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
          style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex flex-column" href="/index.html" style="line-height: 1.2;">
-          <span class="fs-4 fw-bold text-light" style="letter-spacing: 0.5px;">
-            Pacific Invest
-          </span>
-          <small class="text-muted" style="font-size: 0.8rem;">
-            pacificinvest.com
-          </small>
+        <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height: 1.2;">
+          <span class="fs-4 fw-bold text-light" style="letter-spacing: 0.5px;">NY Capital</span>
+          <small class="text-muted" style="font-size: 0.8rem;">nycapital.com</small>
         </a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -55,13 +58,13 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="/privacy.html">Privacy</a></li>
-            <li class="nav-item"><a class="nav-link" href="/terms.html">Terms</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
           </ul>
         </div>
       </div>
@@ -78,7 +81,7 @@
   style="
     width: 100vw;
     min-height: 520px;
-    background: linear-gradient(120deg, rgba(22,38,47,0.67),rgba(22,38,47,0.44)), url('images/invest/hero_invest_team.png');
+    background: linear-gradient(120deg, rgba(22,38,47,0.67),rgba(22,38,47,0.44)), url('images/invest/hero_invest_office.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,10 +102,10 @@
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
         <h1 class="display-4 fw-bold mb-3" style="color:#03e9f4; text-shadow:0 2px 16px #000b;">
-          Your Capital, Our Expertise
+          Build Wealth in the United States
         </h1>
         <p class="lead mb-4" style="color:#fff; text-shadow:0 2px 12px #000b; font-size:1.38em;">
-          Experience the best investment journey with our FCA-licensed team in New York.
+          Transparent fees, high returns, real-time analytics, all in one platform.
         </p>
         <a href="#contact"
           class="btn btn-lg btn-primary px-5 py-3"
@@ -125,8 +128,10 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         
+          <img src="images/invest/about_invest_agreement.png" class="img-fluid rounded-4 mb-4 shadow" alt="About Us" loading="lazy">
+        
         <div class="fs-5" style="background:rgba(0,0,0,0.10); border-radius:11px; padding:1.2em 1.6em;">
-          ['We provide expert financial advice and investment strategies to help you achieve your financial goals in the United States stock market.', 'Our team consists of certified advisors and analysts with decades of experience in regulated markets across United States.', 'We are dedicated to delivering tailored portfolio management and ongoing support for every client of Pacific Invest in New York, United States.']
+          ['We provide expert financial advice and investment strategies to help you achieve your financial goals in the United States stock market.', 'Our team consists of certified advisors and analysts with decades of experience in regulated markets across United States.', 'We are dedicated to delivering tailored portfolio management and ongoing support for every client of NY Capital in San Francisco, United States.']
         </div>
       </div>
     </div>
@@ -141,8 +146,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Retirement Planning</div>
-              <div class="text-light" style="font-size:1.07rem;">Build a future-proof retirement plan in United States.</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Tax Optimization</div>
+              <div class="text-light" style="font-size:1.07rem;">Reduce tax burdens with our professional guidance.</div>
             </div>
           </div>
         </div>
@@ -159,8 +164,17 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Tax Optimization</div>
-              <div class="text-light" style="font-size:1.07rem;">Reduce tax burdens with our professional guidance.</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Retirement Planning</div>
+              <div class="text-light" style="font-size:1.07rem;">Build a future-proof retirement plan in United States.</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
+            <div class="card-body">
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Market Analytics</div>
+              <div class="text-light" style="font-size:1.07rem;">Get exclusive insights from our research team.</div>
             </div>
           </div>
         </div>
@@ -182,19 +196,19 @@
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Tailored Investment Plans for New York
+              Transparent Fee Structure
+            </div>
+          </div>
+        
+          <div class="col-md-4 col-12">
+            <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
+              Tailored Investment Plans for San Francisco
             </div>
           </div>
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
               Real-Time Analytics
-            </div>
-          </div>
-        
-          <div class="col-md-4 col-12">
-            <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Fully Regulated by FCA (United States)
             </div>
           </div>
         
@@ -221,8 +235,8 @@
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Thomas Reid</div>
-              <div style="font-size:1.05rem;">Professional service and impressive returns — highly recommend Pacific Invest in New York!</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">James Patel</div>
+              <div style="font-size:1.05rem;">Corporate investment made simple and profitable by NY Capital.</div>
             </div>
           </div>
         </div>
@@ -233,6 +247,16 @@
             <div class="card-body">
               <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Laura Stevens</div>
               <div style="font-size:1.05rem;">Clear onboarding, transparent fees, and great support in United States.</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-lg h-100 border-0"
+               style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
+            <div class="card-body">
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Sophie Graham</div>
+              <div style="font-size:1.05rem;">My advisor at NY Capital was patient and always available.</div>
             </div>
           </div>
         </div>
@@ -249,7 +273,7 @@
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> What is the minimum investment?<br>
-              <b>A:</b> From £5,000 for standard accounts at Pacific Invest, £20,000 for managed portfolios.
+              <b>A:</b> From £5,000 for standard accounts at NY Capital, £20,000 for managed portfolios.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
@@ -259,7 +283,7 @@
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> Can I withdraw funds anytime?<br>
-              <b>A:</b> Yes, subject to account terms with Pacific Invest.
+              <b>A:</b> Yes, subject to account terms with NY Capital.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
@@ -269,7 +293,7 @@
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> Is my data safe?<br>
-              <b>A:</b> We use bank-grade encryption and strict privacy policies at Pacific Invest.
+              <b>A:</b> We use bank-grade encryption and strict privacy policies at NY Capital.
             </li>
           
         </ul>
@@ -285,15 +309,6 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">New Investment App Launches</b>
-              <div class="text-light" style="font-size:1.07rem;">The latest fintech tool in United States makes investing simpler than ever.</div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
-            <div class="card-body">
               <b class="d-block mb-2" style="color:#03e9f4;">ESG Investments on the Rise</b>
               <div class="text-light" style="font-size:1.07rem;">Green portfolios gain traction among United States investors.</div>
             </div>
@@ -303,8 +318,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">Tech Stocks Surge in New York</b>
-              <div class="text-light" style="font-size:1.07rem;">New York technology sector outperforms all other indices this month.</div>
+              <b class="d-block mb-2" style="color:#03e9f4;">ISA Tax Changes Announced</b>
+              <div class="text-light" style="font-size:1.07rem;">Government adjusts savings account rules for 2024 in United States.</div>
             </div>
           </div>
         </div>
@@ -312,8 +327,17 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
             <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">UK Market Hits All-Time High</b>
-              <div class="text-light" style="font-size:1.07rem;">The FTSE 100 index closed at a new record amid investor optimism in United States.</div>
+              <b class="d-block mb-2" style="color:#03e9f4;">Tech Stocks Surge in San Francisco</b>
+              <div class="text-light" style="font-size:1.07rem;">San Francisco technology sector outperforms all other indices this month.</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
+            <div class="card-body">
+              <b class="d-block mb-2" style="color:#03e9f4;">New Investment App Launches</b>
+              <div class="text-light" style="font-size:1.07rem;">The latest fintech tool in United States makes investing simpler than ever.</div>
             </div>
           </div>
         </div>
@@ -344,14 +368,14 @@
       </div>
       <div class="col-md-6">
         <div class="bg-white rounded-4 shadow-sm p-4 h-100">
-          <div class="fw-bold mb-2" style="font-size:1.17rem;">Pacific Invest</div>
+          <div class="fw-bold mb-2" style="font-size:1.17rem;">NY Capital</div>
           <div class="mb-3" style="font-size:1.08rem;">
-            <span>📍 500 Fifth Ave, New York, NY</span><br>
-            <span>📞 +1 212 555 6789</span><br>
-            <span>✉️ support@pacificinvest.com</span>
+            <span>📍 456 Market St, San Francisco, CA</span><br>
+            <span>📞 +1 415 555 5678</span><br>
+            <span>✉️ hello@nycapital.com</span>
           </div>
           <iframe 
-            src="https://www.google.com/maps?q=500%20Fifth%20Ave%2C%20New%20York%2C%20NY&output=embed"
+            src="https://www.google.com/maps?q=456%20Market%20St%2C%20San%20Francisco%2C%20CA&output=embed"
             width="100%" height="145" style="border-radius:10px; border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
@@ -367,26 +391,26 @@
     <div class="container">
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
-          <h5 class="text-light">Pacific Invest</h5>
+          <h5 class="text-light">NY Capital</h5>
           
-            <p><i class="fa fa-map-marker-alt me-2 text-light"></i><span class="text-light">500 Fifth Ave, New York, NY</span></p>
+            <p><i class="fa fa-map-marker-alt me-2 text-light"></i><span class="text-light">456 Market St, San Francisco, CA</span></p>
           
           
-            <p><i class="fa fa-phone me-2 text-light"></i><span class="text-light">+1 212 555 6789</span></p>
+            <p><i class="fa fa-phone me-2 text-light"></i><span class="text-light">+1 415 555 5678</span></p>
           
           
             <p><i class="fa fa-envelope me-2 text-light"></i>
-              <a href="mailto:support@pacificinvest.com" class="text-light">support@pacificinvest.com</a>
+              <a href="mailto:hello@nycapital.com" class="text-light">hello@nycapital.com</a>
             </p>
           
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Menu</h5>
           <ul class="list-unstyled">
-            <li><a href="/about.html" class="text-light">About</a></li>
-            <li><a href="/services.html" class="text-light">Services</a></li>
-            <li><a href="/blog.html" class="text-light">Blog</a></li>
-            <li><a href="/faq.html" class="text-light">FAQ</a></li>
+            <li><a href="about.html" class="text-light">About</a></li>
+            <li><a href="services.html" class="text-light">Services</a></li>
+            <li><a href="blog.html" class="text-light">Blog</a></li>
+            <li><a href="faq.html" class="text-light">FAQ</a></li>
           </ul>
         </div>
         <div class="col-md-4">
@@ -399,7 +423,7 @@
         </div>
       </div>
       <div class="text-center text-light mt-4">
-        © 2025 Pacific Invest. All rights reserved.
+        © 2025 NY Capital. All rights reserved.
       </div>
     </div>
   </footer>
@@ -433,8 +457,7 @@
     </div>
   </div>
 
-  <!-- COOKIE CONSENT BANNER -->
-  <div id="cookieModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -448,7 +471,9 @@
     </div>
   </div>
 
-  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded" style="display:none; max-width:320px;">
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded"
+       style="display:none; max-width:320px;">
     <strong>We use cookies.</strong>
     <small>This website uses cookies to ensure you get the best experience.</small>
     <button id="cookieAcceptBtn" class="btn btn-sm btn-primary ms-2">Accept</button>
