@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <title>
     
-      Blog | AmeriFin
+      Blog | US Invest
     
   </title>
-  <meta name="description" content="">
+  <meta name="description"
+        content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!-- Custom styles -->
   <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -27,10 +30,10 @@
     <div class="container-fluid">
       <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height: 1.2;">
         <span class="fs-4 fw-bold text-light" style="letter-spacing: 0.5px;">
-          AmeriFin
+          US Invest
         </span>
         <small class="text-muted" style="font-size: 0.8rem;">
-          amerifin.com
+          usinvest.com
         </small>
       </a>
       <button class="navbar-toggler" type="button"
@@ -53,22 +56,29 @@
           <li class="nav-item">
             <a class="nav-link" href="extended_faq.html">FAQ</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="privacy.html">Privacy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="terms.html">Terms</a>
-          </li>
+-         <li class="nav-item">
+-           <a class="nav-link" href="privacy.html">Privacy</a>
+-         </li>
+-         <li class="nav-item">
+-           <a class="nav-link" href="terms.html">Terms</a>
+-         </li>
++         <li class="nav-item">
++           <a class="nav-link" href="extended_privacy.html">Privacy</a>
++         </li>
++         <li class="nav-item">
++           <a class="nav-link" href="extended_terms.html">Terms</a>
++         </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
 
-  <!-- ANNOUNCEMENT -->
+  <!-- ANNOUNCEMENT BAR -->
   
 
   <main class="container py-5">
+
     
       <section class="my-5">
         <h1>Blog</h1>
@@ -76,55 +86,22 @@
           <p>No blog posts yet.</p>
         
       </section>
+
     
+
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer-grid bg-dark text-light py-5">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-4">
-          <h5>AmeriFin</h5>
-          
-            <p><i class="fa fa-map-marker-alt me-2"></i>100 Wilshire Blvd, Santa Monica, CA</p>
-          
-          
-            <p><i class="fa fa-phone me-2"></i>+1 310 555 4321</p>
-          
-          
-            <p><i class="fa fa-envelope me-2"></i><a href="mailto:info@amerifin.com" class="text-decoration-none text-light">info@amerifin.com</a></p>
-          
-        </div>
-        <div class="col-md-4">
-          <h5>Menu</h5>
-          <ul class="list-unstyled">
-            <li><a href="/" class="text-light">Home</a></li>
-            <li><a href="/about/crypto" class="text-light">About Crypto</a></li>
-            <li><a href="/about/invest" class="text-light">About Invest</a></li>
-            <li><a href="/about/gambling" class="text-light">About Gaming</a></li>
-            <li><a href="/services/crypto" class="text-light">Crypto Services</a></li>
-            <li><a href="/services/invest" class="text-light">Investment Services</a></li>
-            <li><a href="/services/gambling" class="text-light">Gaming Services</a></li>
-            <li><a href="/blog/crypto" class="text-light">Blog (Crypto)</a></li>
-            <li><a href="/faq/crypto" class="text-light">FAQ (Crypto)</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Legal</h5>
-          <ul class="list-unstyled">
-            <li><a href="/privacy" class="text-light">Privacy Policy</a></li>
-            <li><a href="/terms" class="text-light">Terms of Service</a></li>
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#cookieModal" class="text-light">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        © 2025 AmeriFin. All rights reserved.
-      </div>
-    </div>
-  </footer>
+  <footer style="background: #11192a; color: #fff; padding: 2rem 0; text-align:center;">
+  <div class="container">
+    <small>
+      © US Invest 2024. All rights reserved.<br>
+      <span style="color:#03e9f4">usinvest.com</span>
+    </small>
+  </div>
+</footer>
 
-  <!-- Privacy Modal (встроили прямо в base) -->
+  <!-- Privacy Modal -->
   <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -170,26 +147,27 @@
   </div>
 
   <!-- Cookie Banner -->
-  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded" style="display:none; max-width:320px;">
-    <strong>We use cookies.</strong> 
+  <div id="cookieConsent" class="position-fixed bottom-0 start-0 m-3 p-3 bg-dark text-white rounded"
+       style="display:none; max-width:320px;">
+    <strong>We use cookies.</strong>
     <small>This website uses cookies to ensure you get the best experience.</small>
     <button id="cookieAcceptBtn" class="btn btn-sm btn-primary ms-2">Accept</button>
   </div>
 
   <style>
-    .footer-grid { background:#212121; color:#f1f1f1; }
-    .announcement-bar { background:#ffeb3b; }
+    .footer-grid { background: #212121; color: #f1f1f1; }
+    .announcement-bar { background: #ffeb3b; }
   </style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', ()=>{
-      if(!localStorage.getItem('cookieConsent')){
-        document.getElementById('cookieConsent').style.display='block';
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookieConsent').style.display = 'block';
       }
-      document.getElementById('cookieAcceptBtn').onclick = ()=>{
-        localStorage.setItem('cookieConsent','yes');
-        document.getElementById('cookieConsent').style.display='none';
+      document.getElementById('cookieAcceptBtn').onclick = () => {
+        localStorage.setItem('cookieConsent', 'yes');
+        document.getElementById('cookieConsent').style.display = 'none';
       };
     });
   </script>
