@@ -44,14 +44,17 @@ header {
   flex-direction: column;
   line-height: 1.2;
 }
+/* основное название */
 .navbar-brand .brand {
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
 }
-.navbar-brand .brand-small {
+/* маленький домен — делаем белым */
+.navbar-brand .brand-small,
+.navbar-brand .text-muted {
   font-size: 0.85rem;
-  color: #ccc;
+  color: rgba(255,255,255,0.7) !important;
 }
 .navbar-nav .nav-link {
   color: #dbeafe !important;
@@ -62,6 +65,10 @@ header {
 }
 .navbar-nav .nav-link:hover {
   background: rgba(255, 255, 255, 0.08);
+  color: #fff !important;
+}
+.navbar-nav .nav-link.active {
+  background: rgba(255,255,255,0.12);
   color: #fff !important;
 }
 @media (max-width: 992px) {
@@ -178,7 +185,8 @@ section {
 }
 
 /* ====== CARDS GRID ====== */
-.card-grid, .cards-container {
+.card-grid,
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -219,8 +227,15 @@ section {
   line-height: 1.6;
 }
 @media (max-width: 900px) {
-  .card-grid, .cards-container { flex-direction: column; gap:1.2rem; }
-  .card { min-width: 90%; max-width: 100%; }
+  .card-grid,
+  .cards-container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .card {
+    min-width: 90%;
+    max-width: 100%;
+  }
 }
 
 /* ====== GALLERY ====== */
@@ -245,7 +260,8 @@ section {
 }
 .gallery-dot {
   cursor: pointer;
-  width: 13px; height: 13px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background: rgba(255,255,255,0.5);
   display: inline-block;
@@ -271,7 +287,8 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.14);
   margin-bottom: 1.5rem;
 }
-footer h5, footer h4 {
+footer h5,
+footer h4 {
   font-weight: 700;
   color: #fff;
   margin-bottom: 1.2rem;
@@ -301,23 +318,49 @@ footer a:hover {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px) {
-  .hero { min-height: 380px; height: auto; padding: 3rem 1rem 1.2rem; }
-  section { padding: 2.3rem 0; }
-  .section-header h2 { font-size: 1.5rem; }
-  .card { padding: 1.1rem; }
-  .gallery-img { height: 210px; }
-  footer { padding: 2rem 0 1rem; }
-  .footer-block { padding: 1rem; }
+  .hero {
+    min-height: 380px;
+    height: auto;
+    padding: 3rem 1rem 1.2rem;
+  }
+  section {
+    padding: 2.3rem 0;
+  }
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  .card {
+    padding: 1.1rem;
+  }
+  .gallery-img {
+    height: 210px;
+  }
+  footer {
+    padding: 2rem 0 1rem;
+  }
+  .footer-block {
+    padding: 1rem;
+  }
 }
 @media (max-width: 600px) {
-  main { padding-top: 60px; }
-  .gallery-img { height: 160px; }
+  main {
+    padding-top: 60px;
+  }
+  .gallery-img {
+    height: 160px;
+  }
 }
 
 /* ====== ANIMATIONS ====== */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .section-nocards .service-block,
 .card {
