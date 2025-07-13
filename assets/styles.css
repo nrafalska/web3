@@ -145,7 +145,6 @@ main {
 @media (max-width: 900px) {
   main { padding-top: 70px; }
 }
-
 section {
   position: relative;
   margin: 0 0 2.2rem;
@@ -154,6 +153,61 @@ section {
   background: #fff;
   box-shadow: 0 10px 32px rgba(0,0,0,0.09);
   scroll-margin-top: 70px; /* компенсирует якоря */
+}
+
+/* ====== SECTION WITHOUT CARDS ====== */
+.section-nocards {
+  background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
+  border-radius: 40px;
+  padding: 5rem 3rem;
+  margin: 4rem auto;
+  max-width: 1400px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+.section-nocards::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+}
+.section-nocards h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+  /* градиентный текст, при необходимости добавить через background-clip */
+}
+.section-nocards p {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  /* italic, serif, как нужно */
+}
+.section-nocards.with-image {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.section-nocards .content {
+  flex: 1;
+}
+.section-nocards .image-container {
+  flex: 0 0 40%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+.section-nocards .image-container:hover {
+  transform: translateY(-10px);
+}
+.section-nocards .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ====== SECTION HEADER ====== */
@@ -201,41 +255,45 @@ section {
   max-width: 320px;
   flex: 1 1 280px;
   margin: 1rem 0;
-  transition: transform 0.28s cubic-bezier(0.4,0,0.2,1), box-shadow 0.28s;
   opacity: 0;
   transform: translateY(40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 .card.animate-on-scroll {
   opacity: 1;
   transform: translateY(0);
 }
-.card:hover {
-  transform: scale(1.08) translateY(-8px);
-  box-shadow: 0 8px 36px rgba(0,0,0,0.2);
-  z-index: 2;
+
+/* ====== ADVANTAGES, TESTIMONIALS & NEWS CARDS ====== */
+.adv-card,
+.testimonial-card,
+.news-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+  padding: 2rem;
+  margin: 1rem auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
 }
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a237e;
-  margin-bottom: 0.7rem;
+.adv-card:hover,
+.testimonial-card:hover,
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-.card-text {
-  font-size: 1rem;
-  color: #455a64;
-  line-height: 1.6;
-}
-@media (max-width: 900px) {
-  .card-grid,
-  .cards-container {
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-  .card {
-    min-width: 90%;
-    max-width: 100%;
-  }
+.adv-card.animate-on-scroll,
+.testimonial-card.animate-on-scroll,
+.news-card.animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ====== GALLERY ====== */
@@ -285,7 +343,7 @@ footer {
   border-radius: 14px;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.14);
-  margin-bottom: 1.5rem;
+  margin: 0 1rem 1.5rem;
 }
 footer h5,
 footer h4 {
@@ -329,7 +387,7 @@ footer a:hover {
   .section-header h2 {
     font-size: 1.5rem;
   }
-  .card {
+  .card, .adv-card, .testimonial-card, .news-card {
     padding: 1.1rem;
   }
   .gallery-img {
@@ -340,6 +398,7 @@ footer a:hover {
   }
   .footer-block {
     padding: 1rem;
+    margin: 0 0 1rem;
   }
 }
 @media (max-width: 600px) {
@@ -363,7 +422,10 @@ footer a:hover {
   }
 }
 .section-nocards .service-block,
-.card {
+.card,
+.adv-card,
+.testimonial-card,
+.news-card {
   animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
 }
 
