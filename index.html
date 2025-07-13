@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- DYNAMIC TITLE -->
   <title>
     
-      Melbourne Capital
+      US Invest – Professional Investment Solutions
     
   </title>
-  <meta name="description"
-        content="Crypto, invest and fintech services. Modern multi-page landing.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- DYNAMIC META TAGS -->
+  <meta name="description" content="US Invest offers tailored wealth-management and portfolio tools in the United States market.">
+  <meta name="keywords"    content="investing, portfolio, wealth management">
+  <meta name="viewport"    content="width=device-width, initial-scale=1">
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="US Invest – Professional Investment Solutions">
+  <meta property="og:description" content="US Invest offers tailored wealth-management and portfolio tools in the United States market.">
+  <meta property="og:image"       content="https://usinvest.com/assets/og-invest.png">
+  <meta property="og:type"        content="website">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,20 +27,41 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Your custom styles -->
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
     /* push content below fixed navbar */
-    body { padding-top: 70px; }
-    .announcement-bar { background: #ffeb3b; }
-    .footer-grid { background: #212121; color: #f1f1f1; }
+    body { padding-top: 70px; color: #222 !important; }
 
-    /* only shift hero under the navbar */
+    /* announcement bar and footer */
+    .announcement-bar { background: #ffeb3b; }
+    .footer-grid      { background: #212121; color: #f1f1f1; }
+
+    /* shift hero under navbar */
     #hero {
       margin-top: -70px;
       padding-top: 70px;
     }
+
+    /* —— TEXT COLOR OVERRIDES —— */
+
+    /* 1) Default body text dark */
+    body { color: #222 !important; }
+
+    /* 2) Prevent white text in any container-fluid (light sections) and cards */
+    .container-fluid .text-white,
+    .card .text-white {
+      color: #222 !important;
+    }
+
+    /* 3) Allow white text only inside truly dark backgrounds */
+    .bg-dark .text-white {
+      color: #fff !important;
+    }
+
+    /* Checkmark animation */
+    @keyframes stroke { to { stroke-dashoffset: 0; } }
   </style>
 </head>
 <body>
@@ -41,8 +72,8 @@
          style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
       <div class="container-fluid">
         <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height:1.2">
-          <span class="fs-4 fw-bold text-light">Melbourne Capital</span>
-          <small class="text-muted" style="font-size:0.8rem">melbournecapital.com</small>
+          <span class="fs-4 fw-bold text-light">US Invest</span>
+          <small class="text-muted" style="font-size:0.8rem">usinvest.com</small>
         </a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -52,27 +83,13 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="faq.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="privacy.html">Privacy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="terms.html">Terms</a>
-            </li>
+            <li class="nav-item"><a class="nav-link active"     href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link "    href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link "     href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link "      href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link "  href="privacy.html">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link "    href="terms.html">Terms</a></li>
           </ul>
         </div>
       </div>
@@ -88,7 +105,7 @@
   style="
     width: 100vw;
     min-height: 520px;
-    background: linear-gradient(120deg, rgba(22,38,47,0.67),rgba(22,38,47,0.44)), url('images/invest/hero_invest_building.png');
+    background: linear-gradient(120deg, rgba(22,38,47,0.67),rgba(22,38,47,0.44)), url('images/invest/hero_invest_handmoney.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -109,10 +126,10 @@
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
         <h1 class="display-4 fw-bold mb-3" style="color:#03e9f4; text-shadow:0 2px 16px #000b;">
-          Invest Smartly in the Australia Market
+          Your Capital, Our Expertise
         </h1>
         <p class="lead mb-4" style="color:#fff; text-shadow:0 2px 12px #000b; font-size:1.38em;">
-          Grow your wealth with safe and profitable strategies from Melbourne Capital in Brisbane.
+          Experience the best investment journey with our FCA-licensed team in New York.
         </p>
         <a href="#contact"
           class="btn btn-lg btn-primary px-5 py-3"
@@ -134,14 +151,32 @@
   <!-- MAIN CONTENT -->
   <main class="container-fluid px-0">
     
-      ﻿<section id="about_us" style="background: ; color: #fff; padding: 3.5rem 0;">
+      <section id="about_us" style="background: ; color: #fff; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2.2rem; margin-top:0.6em;">About Us</h2>
+    <h2 class="text-center mb-4 fw-bold"
+        style="color: #03e9f4; font-size:2.2rem; margin-top:0.6em;">
+      About Us
+    </h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
         
-        <div class="fs-5" style="background:rgba(0,0,0,0.10); border-radius:11px; padding:1.2em 1.6em;">
-          ['We provide expert financial advice and investment strategies to help you achieve your financial goals in the Australia stock market.', 'Our team consists of certified advisors and analysts with decades of experience in regulated markets across Australia.', 'We are dedicated to delivering tailored portfolio management and ongoing support for every client of Melbourne Capital in Brisbane, Australia.']
+          <img src="images/invest/about_invest_tower.png"
+               class="img-fluid rounded-4 mb-4 shadow"
+               alt="About Us"
+               loading="lazy">
+        
+        <div class="fs-5 text-dark"
+             style="background: rgba(0,0,0,0.10);
+                    border-radius: 11px;
+                    padding: 1.2em 1.6em;">
+          
+          
+            <p class="mb-3">We provide expert financial advice and investment strategies to help you achieve your financial goals in the United States stock market.</p>
+          
+            <p class="mb-3">Our team consists of certified advisors and analysts with decades of experience in regulated markets across United States.</p>
+          
+            <p class="mb-3">We are dedicated to delivering tailored portfolio management and ongoing support for every client of US Invest in New York, United States.</p>
+          
         </div>
       </div>
     </div>
@@ -150,8 +185,6 @@
       ﻿<section id="services" style="background: ; padding: 3.5rem 0;">
   <div class="container">
     <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2rem;">Our Services</h2>
-    
-      <img src="images/invest/service_invest_phone.png" class="img-fluid rounded-4 mb-4 shadow" alt="Services" loading="lazy">
     
     <div class="row g-4 justify-content-center">
       
@@ -167,8 +200,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Market Analytics</div>
-              <div class="text-light" style="font-size:1.07rem;">Get exclusive insights from our research team.</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Retirement Planning</div>
+              <div class="text-light" style="font-size:1.07rem;">Build a future-proof retirement plan in United States.</div>
             </div>
           </div>
         </div>
@@ -176,8 +209,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="card shadow-sm h-100 border-0" style="background:rgba(10,10,50,0.88); border-radius:18px;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Retirement Planning</div>
-              <div class="text-light" style="font-size:1.07rem;">Build a future-proof retirement plan in Australia.</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Market Analytics</div>
+              <div class="text-light" style="font-size:1.07rem;">Get exclusive insights from our research team.</div>
             </div>
           </div>
         </div>
@@ -193,7 +226,7 @@
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              24/7 Personal Support
+              Transparent Fee Structure
             </div>
           </div>
         
@@ -205,19 +238,19 @@
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Fully Regulated by FCA (Australia)
+              Tailored Investment Plans for New York
             </div>
           </div>
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Transparent Fee Structure
+              24/7 Personal Support
             </div>
           </div>
         
           <div class="col-md-4 col-12">
             <div class="adv-card shadow rounded-3 p-4 mb-2 fs-5" style="background:rgba(255,255,255,0.7); text-align:center;">
-              Tailored Investment Plans for Brisbane
+              Fully Regulated by FCA (United States)
             </div>
           </div>
         
@@ -234,28 +267,8 @@
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">James Patel</div>
-              <div style="font-size:1.05rem;">Corporate investment made simple and profitable by Melbourne Capital.</div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-lg h-100 border-0"
-               style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
-            <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Sophie Graham</div>
-              <div style="font-size:1.05rem;">My advisor at Melbourne Capital was patient and always available.</div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-lg h-100 border-0"
-               style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
-            <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Richard Holden</div>
-              <div style="font-size:1.05rem;">Easy to track my portfolio and results in Australia.</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Laura Stevens</div>
+              <div style="font-size:1.05rem;">Clear onboarding, transparent fees, and great support in United States.</div>
             </div>
           </div>
         </div>
@@ -265,7 +278,7 @@
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
               <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Thomas Reid</div>
-              <div style="font-size:1.05rem;">Professional service and impressive returns — highly recommend Melbourne Capital in Brisbane!</div>
+              <div style="font-size:1.05rem;">Professional service and impressive returns — highly recommend US Invest in New York!</div>
             </div>
           </div>
         </div>
@@ -274,8 +287,8 @@
           <div class="card shadow-lg h-100 border-0"
                style="background:rgba(10,10,50,0.8); border-radius:18px; color:#fff;">
             <div class="card-body">
-              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Laura Stevens</div>
-              <div style="font-size:1.05rem;">Clear onboarding, transparent fees, and great support in Australia.</div>
+              <div class="fw-semibold mb-2" style="color:#03e9f4; font-size:1.14rem;">Richard Holden</div>
+              <div style="font-size:1.05rem;">Easy to track my portfolio and results in United States.</div>
             </div>
           </div>
         </div>
@@ -292,27 +305,27 @@
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> What is the minimum investment?<br>
-              <b>A:</b> From £5,000 for standard accounts at Melbourne Capital, £20,000 for managed portfolios.
+              <b>A:</b> From £5,000 for standard accounts at US Invest, £20,000 for managed portfolios.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> Are your services regulated?<br>
-              <b>A:</b> Yes, fully FCA-compliant in Australia.
+              <b>A:</b> Yes, fully FCA-compliant in United States.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> Can I withdraw funds anytime?<br>
-              <b>A:</b> Yes, subject to account terms with Melbourne Capital.
+              <b>A:</b> Yes, subject to account terms with US Invest.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> How do I start?<br>
-              <b>A:</b> Just sign up and verify your identity in Australia.
+              <b>A:</b> Just sign up and verify your identity in United States.
             </li>
           
             <li class="mb-4 p-3 rounded-3" style="background:rgba(255,255,255,0.11);">
               <b style="color:#03e9f4">Q:</b> Is my data safe?<br>
-              <b>A:</b> We use bank-grade encryption and strict privacy policies at Melbourne Capital.
+              <b>A:</b> We use bank-grade encryption and strict privacy policies at US Invest.
             </li>
           
         </ul>
@@ -320,43 +333,77 @@
     </div>
   </div>
 </section>
-      ﻿<section id="news" style="background: ; padding: 3.5rem 0;">
+      
+<section id="news"
+         style="background: ; padding: 3.5rem 0;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color: #03e9f4; font-size:2rem;">News</h2>
+    <h2 class="text-center mb-5 fw-bold"
+        style="color: #03e9f4; font-size:2.2rem;">
+      News
+    </h2>
+
     <div class="row g-4 justify-content-center">
       
         <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
-            <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">UK Market Hits All-Time High</b>
-              <div class="text-light" style="font-size:1.07rem;">The FTSE 100 index closed at a new record amid investor optimism in Australia.</div>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body bg-white">
+              <!-- Заголовок карточки -->
+              <h5 class="card-title mb-3"
+                  style="color: #03e9f4;">
+                Tech Stocks Surge in New York
+              </h5>
+              <!-- Описание -->
+              <p class="card-text text-dark">
+                New York technology sector outperforms all other indices this month.
+              </p>
             </div>
           </div>
         </div>
       
         <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
-            <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">ESG Investments on the Rise</b>
-              <div class="text-light" style="font-size:1.07rem;">Green portfolios gain traction among Australia investors.</div>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body bg-white">
+              <!-- Заголовок карточки -->
+              <h5 class="card-title mb-3"
+                  style="color: #03e9f4;">
+                New Investment App Launches
+              </h5>
+              <!-- Описание -->
+              <p class="card-text text-dark">
+                The latest fintech tool in United States makes investing simpler than ever.
+              </p>
             </div>
           </div>
         </div>
       
         <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
-            <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">ISA Tax Changes Announced</b>
-              <div class="text-light" style="font-size:1.07rem;">Government adjusts savings account rules for 2024 in Australia.</div>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body bg-white">
+              <!-- Заголовок карточки -->
+              <h5 class="card-title mb-3"
+                  style="color: #03e9f4;">
+                ISA Tax Changes Announced
+              </h5>
+              <!-- Описание -->
+              <p class="card-text text-dark">
+                Government adjusts savings account rules for 2024 in United States.
+              </p>
             </div>
           </div>
         </div>
       
         <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0" style="background:rgba(255,255,255,0.08); border-radius:15px;">
-            <div class="card-body">
-              <b class="d-block mb-2" style="color:#03e9f4;">New Investment App Launches</b>
-              <div class="text-light" style="font-size:1.07rem;">The latest fintech tool in Australia makes investing simpler than ever.</div>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body bg-white">
+              <!-- Заголовок карточки -->
+              <h5 class="card-title mb-3"
+                  style="color: #03e9f4;">
+                ESG Investments on the Rise
+              </h5>
+              <!-- Описание -->
+              <p class="card-text text-dark">
+                Green portfolios gain traction among United States investors.
+              </p>
             </div>
           </div>
         </div>
@@ -387,14 +434,14 @@
       </div>
       <div class="col-md-6">
         <div class="bg-white rounded-4 shadow-sm p-4 h-100">
-          <div class="fw-bold mb-2" style="font-size:1.17rem;">Melbourne Capital</div>
+          <div class="fw-bold mb-2" style="font-size:1.17rem;">US Invest</div>
           <div class="mb-3" style="font-size:1.08rem;">
-            <span>📍 Collins St, Melbourne, VIC</span><br>
-            <span>📞 +61 3 2345 6789</span><br>
-            <span>✉️ hello@melbournecapital.au</span>
+            <span>📍 123 Wall St, New York, NY</span><br>
+            <span>📞 +1 212 555 1234</span><br>
+            <span>✉️ info@usinvest.com</span>
           </div>
           <iframe 
-            src="https://www.google.com/maps?q=Collins%20St%2C%20Melbourne%2C%20VIC&output=embed"
+            src="https://www.google.com/maps?q=123%20Wall%20St%2C%20New%20York%2C%20NY&output=embed"
             width="100%" height="145" style="border-radius:10px; border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
@@ -404,79 +451,91 @@
     
   </main>
 
+  <!-- SUCCESS MODAL -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4" style="border-radius:20px; overflow:hidden;">
+        <svg class="checkmark mx-auto d-block mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+             style="width:100px;height:100px;stroke:#4bb71b;stroke-width:3;stroke-dasharray:166;stroke-dashoffset:166;animation:stroke 0.6s cubic-bezier(.65,0,.45,1) forwards;">
+          <circle cx="26" cy="26" r="25" fill="none"/>
+          <path d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                style="stroke-dasharray:48;stroke-dashoffset:48;animation:stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards;"/>
+        </svg>
+        <div class="message mb-4" id="successModalMessage">
+          Спасибо! Мы скоро свяжемся с вами.
+        </div>
+        <button type="button"
+                class="btn btn-success w-100"
+                data-bs-dismiss="modal"
+                id="successModalClose">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer-grid py-5">
     <div class="container">
       <div class="row g-4 justify-content-center">
+        <!-- Contact Info -->
         <div class="col-md-4">
-          <h5 class="text-light">Melbourne Capital</h5>
-          <p class="text-light small">melbournecapital.com</p>
+          <h5 class="text-light">US Invest</h5>
+          <p class="text-light small">usinvest.com</p>
           
-            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>Collins St, Melbourne, VIC</p>
+            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Wall St, New York, NY</p>
           
           
-            <p class="text-light"><i class="fa fa-phone me-2"></i>+61 3 2345 6789</p>
+            <p class="text-light"><i class="fa fa-phone me-2"></i>+1 212 555 1234</p>
           
           
             <p class="text-light">
               <i class="fa fa-envelope me-2"></i>
-              <a href="mailto:hello@melbournecapital.au" class="text-light">hello@melbournecapital.au</a>
+              <a href="mailto:info@usinvest.com" class="text-light">info@usinvest.com</a>
             </p>
           
         </div>
+
+        <!-- Main Menu -->
         <div class="col-md-4">
           <h5 class="text-light">Menu</h5>
           <ul class="list-unstyled">
-            <li><a href="about.html" class="text-light">About</a></li>
-            <li><a href="services.html" class="text-light">Services</a></li>
-            <li><a href="blog.html" class="text-light">Blog</a></li>
-            <li><a href="faq.html" class="text-light">FAQ</a></li>
+            <li><a href="index.html"    class="text-light fw-bold">Home</a></li>
+            <li><a href="about.html"    class="text-light ">About</a></li>
+            <li><a href="services.html" class="text-light ">Services</a></li>
+            <li><a href="blog.html"     class="text-light ">Blog</a></li>
+            <li><a href="faq.html"      class="text-light ">FAQ</a></li>
           </ul>
         </div>
+
+        <!-- Legal Links -->
         <div class="col-md-4">
           <h5 class="text-light">Legal</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a></li>
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">Cookie Policy</a></li>
+            <li>
+              <a href="privacy.html" class="text-light ">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="terms.html" class="text-light ">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">
+                Cookie Policy
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+
       <div class="text-center text-light mt-4">
-        © 2025 Melbourne Capital — melbournecapital.com. All rights reserved.
+        © 2025 US Invest — usinvest.com. All rights reserved.
       </div>
     </div>
   </footer>
-
-  <!-- PRIVACY MODAL -->
-  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Privacy Policy</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" style="white-space: pre-wrap;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TERMS MODAL -->
-  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Terms of Service</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" style="white-space: pre-wrap;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- COOKIE POLICY MODAL -->
   <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
@@ -504,17 +563,7 @@
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const banner = document.getElementById('cookieConsent');
-      if (!localStorage.getItem('cookieConsent')) {
-        banner.style.display = 'block';
-      }
-      document.getElementById('cookieAcceptBtn').onclick = () => {
-        localStorage.setItem('cookieConsent', 'yes');
-        banner.style.display = 'none';
-      };
-    });
-  </script>
+
+  
 </body>
 </html>

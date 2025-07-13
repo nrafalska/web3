@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- DYNAMIC TITLE -->
   <title>
     
-      Privacy Policy | Melbourne Capital
+      Privacy Policy | US Invest
     
   </title>
-  <meta name="description"
-        content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- DYNAMIC META TAGS -->
+  <meta name="description" content="US Invest offers tailored wealth-management and portfolio tools in the United States market.">
+  <meta name="keywords"    content="investing, portfolio, wealth management">
+  <meta name="viewport"    content="width=device-width, initial-scale=1">
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="US Invest – Professional Investment Solutions">
+  <meta property="og:description" content="US Invest offers tailored wealth-management and portfolio tools in the United States market.">
+  <meta property="og:image"       content="https://usinvest.com/assets/og-invest.png">
+  <meta property="og:type"        content="website">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,20 +27,41 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Your custom styles -->
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
     /* push content below fixed navbar */
-    body { padding-top: 70px; }
-    .announcement-bar { background: #ffeb3b; }
-    .footer-grid { background: #212121; color: #f1f1f1; }
+    body { padding-top: 70px; color: #222 !important; }
 
-    /* only shift hero under the navbar */
+    /* announcement bar and footer */
+    .announcement-bar { background: #ffeb3b; }
+    .footer-grid      { background: #212121; color: #f1f1f1; }
+
+    /* shift hero under navbar */
     #hero {
       margin-top: -70px;
       padding-top: 70px;
     }
+
+    /* —— TEXT COLOR OVERRIDES —— */
+
+    /* 1) Default body text dark */
+    body { color: #222 !important; }
+
+    /* 2) Prevent white text in any container-fluid (light sections) and cards */
+    .container-fluid .text-white,
+    .card .text-white {
+      color: #222 !important;
+    }
+
+    /* 3) Allow white text only inside truly dark backgrounds */
+    .bg-dark .text-white {
+      color: #fff !important;
+    }
+
+    /* Checkmark animation */
+    @keyframes stroke { to { stroke-dashoffset: 0; } }
   </style>
 </head>
 <body>
@@ -41,8 +72,8 @@
          style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
       <div class="container-fluid">
         <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height:1.2">
-          <span class="fs-4 fw-bold text-light">Melbourne Capital</span>
-          <small class="text-muted" style="font-size:0.8rem">melbournecapital.com</small>
+          <span class="fs-4 fw-bold text-light">US Invest</span>
+          <small class="text-muted" style="font-size:0.8rem">usinvest.com</small>
         </a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -52,27 +83,13 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="faq.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="privacy.html">Privacy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="terms.html">Terms</a>
-            </li>
+            <li class="nav-item"><a class="nav-link "     href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link "    href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link "     href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link "      href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link active"  href="privacy.html">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link "    href="terms.html">Terms</a></li>
           </ul>
         </div>
       </div>
@@ -91,152 +108,221 @@
       
 <section id="privacy-extended" class="py-5" style="background: var(--section-bg, #f9f9f9);">
   <div class="container">
-
-    <!-- Page header -->
-    <div class="section-header mb-5 text-center">
-      <h2>Melbourne Capital – Privacy Policy</h2>
-      <p class="lead">
-        This Privacy Policy explains how <strong>Melbourne Capital</strong> (“we”, “us”, or “our”)
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold" style="color: #03e9f4;">
+        US Invest – Privacy Policy
+      </h2>
+      <p class="lead text-muted">
+        This Privacy Policy explains how <strong>US Invest</strong> (“we”, “us”, or “our”)
         collects, uses, discloses, and protects your personal information when you visit
-        <strong>melbournecapital.com</strong> or use any services under the <strong>Melbourne Capital</strong> brand.
+        <strong>usinvest.com</strong> or use our services.
       </p>
     </div>
 
-    <!-- 1. Information We Collect -->
-    <div class="mb-5">
-      <h4 class="fw-bold">1. Information We Collect</h4>
-      <p>We collect the following categories of information:</p>
-      <ul>
-        <li><strong>Personal Identifiers</strong> — name, email address, phone number, billing address.</li>
-        <li><strong>Account Credentials</strong> — username, password, profile details.</li>
-        <li><strong>Usage & Analytics</strong> — pages viewed, session duration, click-streams.</li>
-        <li><strong>Device & Diagnostics</strong> — IP address, browser type, OS, crash logs.</li>
-        <li><strong>Transactional Data</strong> — purchase history, payment method info, invoices.</li>
-      </ul>
-    </div>
+    <!-- Accordion -->
+    <div class="accordion" id="privacyAccordion">
+      <!-- Section 1 -->
+      <div class="accordion-item mb-3 shadow-sm border-0">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed fw-semibold" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne"
+                  style="background: #fff;">
+            <i class="fas fa-user-shield me-2" style="color: #03e9f4;"></i>
+            1. Information We Collect
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+             data-bs-parent="#privacyAccordion">
+          <div class="accordion-body bg-white">
+            <ul class="mb-0">
+              <li><strong>Personal Identifiers</strong> — name, email, phone, billing address.</li>
+              <li><strong>Account Credentials</strong> — username, password, profile settings.</li>
+              <li><strong>Usage & Analytics</strong> — pages viewed, session duration, click-streams.</li>
+              <li><strong>Device & Diagnostics</strong> — IP, browser, OS, crash logs.</li>
+              <li><strong>Transactional Data</strong> — purchase history, payment info, invoices.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <!-- 2. How We Use Your Information -->
-    <div class="mb-5">
-      <h4 class="fw-bold">2. How We Use Your Information</h4>
-      <p>We use your information to:</p>
-      <ul>
-        <li>Provide, maintain and improve the Website and Services.</li>
-        <li>Authenticate access to protected areas.</li>
-        <li>Process payments, refunds and send invoices.</li>
-        <li>Personalize your experience and recommend content.</li>
-        <li>Communicate updates, support messages and marketing.</li>
-        <li>Detect and prevent fraud or abuse.</li>
-      </ul>
-    </div>
+      <!-- Section 2 -->
+      <div class="accordion-item mb-3 shadow-sm border-0">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed fw-semibold" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo"
+                  style="background: #fff;">
+            <i class="fas fa-cog me-2" style="color: #03e9f4;"></i>
+            2. How We Use Your Information
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+             data-bs-parent="#privacyAccordion">
+          <div class="accordion-body bg-white">
+            <ul class="mb-0">
+              <li>Provide, maintain and improve our Website & Services.</li>
+              <li>Authenticate access to protected areas.</li>
+              <li>Process payments, refunds and send invoices.</li>
+              <li>Personalize your experience and recommend content.</li>
+              <li>Send updates, support messages and marketing.</li>
+              <li>Detect and prevent fraud or abuse.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <!-- 3. Data Sharing & Disclosure -->
-    <div class="mb-5">
-      <h4 class="fw-bold">3. Data Sharing & Disclosure</h4>
-      <p>We may share your data with:</p>
-      <ul>
-        <li><strong>Service Providers</strong> — payment processors, hosting, analytics.</li>
-        <li><strong>Business Transfers</strong> — mergers, acquisitions, asset sales.</li>
-        <li><strong>Legal Requests</strong> — to comply with laws or protect our rights.</li>
-        <li><strong>Affiliates</strong> — entities under common control.</li>
-      </ul>
-      <p>We do not sell your personal information.</p>
-    </div>
+      <!-- Section 3 -->
+      <div class="accordion-item mb-3 shadow-sm border-0">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed fw-semibold" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree"
+                  style="background: #fff;">
+            <i class="fas fa-handshake me-2" style="color: #03e9f4;"></i>
+            3. Data Sharing & Disclosure
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+             data-bs-parent="#privacyAccordion">
+          <div class="accordion-body bg-white">
+            <ul class="mb-0">
+              <li><strong>Service Providers</strong> — payment processors, hosting, analytics.</li>
+              <li><strong>Business Transfers</strong> — mergers, acquisitions, asset sales.</li>
+              <li><strong>Legal Requests</strong> — comply with laws or protect our rights.</li>
+              <li><strong>Affiliates</strong> — entities under common control.</li>
+            </ul>
+            <p class="mt-3 mb-0"><em>We do not sell your personal information.</em></p>
+          </div>
+        </div>
+      </div>
 
-    <!-- 4. Cookies & Tracking -->
-    <div class="mb-5">
-      <h4 class="fw-bold">4. Cookies & Tracking</h4>
-      <p>We use cookies, pixels and similar tools to:</p>
-      <ul>
-        <li>Remember preferences and login status.</li>
-        <li>Measure performance and site usage.</li>
-        <li>Enable social media integrations.</li>
-      </ul>
-      <p>You can disable cookies in your browser, but this may limit functionality.</p>
+      <!-- Section 4 -->
+      <div class="accordion-item mb-3 shadow-sm border-0">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed fw-semibold" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour"
+                  style="background: #fff;">
+            <i class="fas fa-cookie-bite me-2" style="color: #03e9f4;"></i>
+            4. Cookies & Tracking
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+             data-bs-parent="#privacyAccordion">
+          <div class="accordion-body bg-white">
+            <ul class="mb-0">
+              <li>Remember preferences and login status.</li>
+              <li>Measure performance and site usage.</li>
+              <li>Enable social media integrations.</li>
+            </ul>
+            <p class="mt-3 mb-0">You can disable cookies in your browser, but this may limit functionality.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Contact -->
-    <div class="text-center">
-      <p>If you have any questions, contact us at <a href="mailto:hello@melbournecapital.au">hello@melbournecapital.au</a>.</p>
+    <div class="text-center mt-5">
+      <p class="mb-1">
+        Questions? Contact us at
+        <a href="mailto:info@usinvest.com">info@usinvest.com</a>
+      </p>
+      <p>
+        &copy; 2025 US Invest. All rights reserved.
+      </p>
     </div>
-
   </div>
 </section>
     
   </main>
 
+  <!-- SUCCESS MODAL -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4" style="border-radius:20px; overflow:hidden;">
+        <svg class="checkmark mx-auto d-block mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+             style="width:100px;height:100px;stroke:#4bb71b;stroke-width:3;stroke-dasharray:166;stroke-dashoffset:166;animation:stroke 0.6s cubic-bezier(.65,0,.45,1) forwards;">
+          <circle cx="26" cy="26" r="25" fill="none"/>
+          <path d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                style="stroke-dasharray:48;stroke-dashoffset:48;animation:stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards;"/>
+        </svg>
+        <div class="message mb-4" id="successModalMessage">
+          Спасибо! Мы скоро свяжемся с вами.
+        </div>
+        <button type="button"
+                class="btn btn-success w-100"
+                data-bs-dismiss="modal"
+                id="successModalClose">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer-grid py-5">
     <div class="container">
       <div class="row g-4 justify-content-center">
+        <!-- Contact Info -->
         <div class="col-md-4">
-          <h5 class="text-light">Melbourne Capital</h5>
-          <p class="text-light small">melbournecapital.com</p>
+          <h5 class="text-light">US Invest</h5>
+          <p class="text-light small">usinvest.com</p>
           
-            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>Collins St, Melbourne, VIC</p>
+            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Wall St, New York, NY</p>
           
           
-            <p class="text-light"><i class="fa fa-phone me-2"></i>+61 3 2345 6789</p>
+            <p class="text-light"><i class="fa fa-phone me-2"></i>+1 212 555 1234</p>
           
           
             <p class="text-light">
               <i class="fa fa-envelope me-2"></i>
-              <a href="mailto:hello@melbournecapital.au" class="text-light">hello@melbournecapital.au</a>
+              <a href="mailto:info@usinvest.com" class="text-light">info@usinvest.com</a>
             </p>
           
         </div>
+
+        <!-- Main Menu -->
         <div class="col-md-4">
           <h5 class="text-light">Menu</h5>
           <ul class="list-unstyled">
-            <li><a href="about.html" class="text-light">About</a></li>
-            <li><a href="services.html" class="text-light">Services</a></li>
-            <li><a href="blog.html" class="text-light">Blog</a></li>
-            <li><a href="faq.html" class="text-light">FAQ</a></li>
+            <li><a href="index.html"    class="text-light ">Home</a></li>
+            <li><a href="about.html"    class="text-light ">About</a></li>
+            <li><a href="services.html" class="text-light ">Services</a></li>
+            <li><a href="blog.html"     class="text-light ">Blog</a></li>
+            <li><a href="faq.html"      class="text-light ">FAQ</a></li>
           </ul>
         </div>
+
+        <!-- Legal Links -->
         <div class="col-md-4">
           <h5 class="text-light">Legal</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a></li>
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">Cookie Policy</a></li>
+            <li>
+              <a href="privacy.html" class="text-light fw-bold">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="terms.html" class="text-light ">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">
+                Cookie Policy
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+
       <div class="text-center text-light mt-4">
-        © 2025 Melbourne Capital — melbournecapital.com. All rights reserved.
+        © 2025 US Invest — usinvest.com. All rights reserved.
       </div>
     </div>
   </footer>
-
-  <!-- PRIVACY MODAL -->
-  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Privacy Policy</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" style="white-space: pre-wrap;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TERMS MODAL -->
-  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Terms of Service</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" style="white-space: pre-wrap;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- COOKIE POLICY MODAL -->
   <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
@@ -264,17 +350,7 @@
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const banner = document.getElementById('cookieConsent');
-      if (!localStorage.getItem('cookieConsent')) {
-        banner.style.display = 'block';
-      }
-      document.getElementById('cookieAcceptBtn').onclick = () => {
-        localStorage.setItem('cookieConsent', 'yes');
-        banner.style.display = 'none';
-      };
-    });
-  </script>
+
+  
 </body>
 </html>

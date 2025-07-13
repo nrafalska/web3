@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- DYNAMIC TITLE -->
   <title>
     
-      Blog | Melbourne Capital
+      Blog | US Invest
     
   </title>
-  <meta name="description"
-        content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- DYNAMIC META TAGS -->
+  <meta name="description" content="US Invest offers tailored wealth-management and portfolio tools in the United States market.">
+  <meta name="keywords"    content="investing, portfolio, wealth management">
+  <meta name="viewport"    content="width=device-width, initial-scale=1">
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="US Invest – Professional Investment Solutions">
+  <meta property="og:description" content="US Invest offers tailored wealth-management and portfolio tools in the United States market.">
+  <meta property="og:image"       content="https://usinvest.com/assets/og-invest.png">
+  <meta property="og:type"        content="website">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,20 +27,41 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Your custom styles -->
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
     /* push content below fixed navbar */
-    body { padding-top: 70px; }
-    .announcement-bar { background: #ffeb3b; }
-    .footer-grid { background: #212121; color: #f1f1f1; }
+    body { padding-top: 70px; color: #222 !important; }
 
-    /* only shift hero under the navbar */
+    /* announcement bar and footer */
+    .announcement-bar { background: #ffeb3b; }
+    .footer-grid      { background: #212121; color: #f1f1f1; }
+
+    /* shift hero under navbar */
     #hero {
       margin-top: -70px;
       padding-top: 70px;
     }
+
+    /* —— TEXT COLOR OVERRIDES —— */
+
+    /* 1) Default body text dark */
+    body { color: #222 !important; }
+
+    /* 2) Prevent white text in any container-fluid (light sections) and cards */
+    .container-fluid .text-white,
+    .card .text-white {
+      color: #222 !important;
+    }
+
+    /* 3) Allow white text only inside truly dark backgrounds */
+    .bg-dark .text-white {
+      color: #fff !important;
+    }
+
+    /* Checkmark animation */
+    @keyframes stroke { to { stroke-dashoffset: 0; } }
   </style>
 </head>
 <body>
@@ -41,8 +72,8 @@
          style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
       <div class="container-fluid">
         <a class="navbar-brand d-flex flex-column" href="index.html" style="line-height:1.2">
-          <span class="fs-4 fw-bold text-light">Melbourne Capital</span>
-          <small class="text-muted" style="font-size:0.8rem">melbournecapital.com</small>
+          <span class="fs-4 fw-bold text-light">US Invest</span>
+          <small class="text-muted" style="font-size:0.8rem">usinvest.com</small>
         </a>
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -52,27 +83,13 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="faq.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="privacy.html">Privacy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="terms.html">Terms</a>
-            </li>
+            <li class="nav-item"><a class="nav-link "     href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link "    href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active"     href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link "      href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link "  href="privacy.html">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link "    href="terms.html">Terms</a></li>
           </ul>
         </div>
       </div>
@@ -94,45 +111,74 @@
 
     <!-- Section header -->
     <div class="section-header mb-5 text-center">
-      <h2>Melbourne Capital – Investment Blog</h2>
-      <p class="lead">
-        Discover market insights, portfolio strategies and expert commentary from <strong>Melbourne Capital</strong>.
+      <h2 class="display-5 fw-bold" style="color: #03e9f4;">
+        US Invest – Investment Blog
+      </h2>
+      <p class="lead text-muted">
+        Discover market insights, portfolio strategies and expert commentary from <strong>US Invest</strong>.
       </p>
     </div>
 
-    <!-- Static Highlights -->
-    <div class="mb-5">
-      <h4 class="fw-bold">Key Topics This Month</h4>
-      <ul>
-        <li>📊 <strong>Market Roundup:</strong> Your monthly summary of stock and bond movements.</li>
-        <li>💡 <strong>Expert Interview:</strong> Q&A with our CIO on emerging trends.</li>
-        <li>⚖️ <strong>Risk Management:</strong> How to balance reward vs. volatility.</li>
-        <li>🛠️ <strong>Tools & Tactics:</strong> New portfolio optimization techniques.</li>
-      </ul>
+    <!-- Key Topics as cards -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-chart-bar fa-2x mb-3" style="color: #03e9f4;"></i>
+            <h6 class="fw-bold">Market Roundup</h6>
+            <p class="small text-muted">Your monthly summary of stock and bond movements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-comments fa-2x mb-3" style="color: #03e9f4;"></i>
+            <h6 class="fw-bold">Expert Interview</h6>
+            <p class="small text-muted">Q&A with our CIO on emerging trends.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-balance-scale fa-2x mb-3" style="color: #03e9f4;"></i>
+            <h6 class="fw-bold">Risk Management</h6>
+            <p class="small text-muted">How to balance reward vs. volatility.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-tools fa-2x mb-3" style="color: #03e9f4;"></i>
+            <h6 class="fw-bold">FinTech Innovations</h6>
+            <p class="small text-muted">New portfolio optimization techniques.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Browse by Category -->
-    <div class="mb-5 text-center">
-      <h5>Browse by Category</h5>
-      <a href="/blog.html?cat=strategy" class="btn btn-sm btn-outline-secondary mx-1">Strategy</a>
-      <a href="/blog.html?cat=allocations" class="btn btn-sm btn-outline-secondary mx-1">Allocations</a>
-      <a href="/blog.html?cat=tax" class="btn btn-sm btn-outline-secondary mx-1">Tax & Compliance</a>
-      <a href="/blog.html?cat=technology" class="btn btn-sm btn-outline-secondary mx-1">FinTech</a>
+    <!-- Dynamic posts as cards -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+      
     </div>
-
-    <!-- Dynamic Posts -->
-    
-      <p class="text-center">No investment articles found. Посмотрите наши <a href="/services.html">сервисы</a> или напишите нам на hello@melbournecapital.au.</p>
-    
 
     <!-- Pagination -->
     
 
     <!-- Newsletter signup -->
     <div class="mt-5 text-center">
-      <h4 class="fw-bold">Subscribe to our Newsletter</h4>
-      <p>Get fresh investment insights straight to your inbox every week.</p>
-      <a href="/subscribe.html" class="btn btn-primary">Subscribe</a>
+      <div class="bg-white p-4 rounded shadow-sm d-inline-block">
+        <h4 class="fw-bold mb-3">Subscribe to our Newsletter</h4>
+        <p class="text-muted mb-3">Get fresh investment insights straight to your inbox every week.</p>
+        <form action="/subscribe" method="post" class="d-flex gap-2">
+          <input type="email" name="email" class="form-control" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary" style="background: #03e9f4;">
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
 
   </div>
@@ -140,79 +186,91 @@
     
   </main>
 
+  <!-- SUCCESS MODAL -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4" style="border-radius:20px; overflow:hidden;">
+        <svg class="checkmark mx-auto d-block mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"
+             style="width:100px;height:100px;stroke:#4bb71b;stroke-width:3;stroke-dasharray:166;stroke-dashoffset:166;animation:stroke 0.6s cubic-bezier(.65,0,.45,1) forwards;">
+          <circle cx="26" cy="26" r="25" fill="none"/>
+          <path d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                style="stroke-dasharray:48;stroke-dashoffset:48;animation:stroke .3s cubic-bezier(.65,0,.45,1) .8s forwards;"/>
+        </svg>
+        <div class="message mb-4" id="successModalMessage">
+          Спасибо! Мы скоро свяжемся с вами.
+        </div>
+        <button type="button"
+                class="btn btn-success w-100"
+                data-bs-dismiss="modal"
+                id="successModalClose">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer-grid py-5">
     <div class="container">
       <div class="row g-4 justify-content-center">
+        <!-- Contact Info -->
         <div class="col-md-4">
-          <h5 class="text-light">Melbourne Capital</h5>
-          <p class="text-light small">melbournecapital.com</p>
+          <h5 class="text-light">US Invest</h5>
+          <p class="text-light small">usinvest.com</p>
           
-            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>Collins St, Melbourne, VIC</p>
+            <p class="text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Wall St, New York, NY</p>
           
           
-            <p class="text-light"><i class="fa fa-phone me-2"></i>+61 3 2345 6789</p>
+            <p class="text-light"><i class="fa fa-phone me-2"></i>+1 212 555 1234</p>
           
           
             <p class="text-light">
               <i class="fa fa-envelope me-2"></i>
-              <a href="mailto:hello@melbournecapital.au" class="text-light">hello@melbournecapital.au</a>
+              <a href="mailto:info@usinvest.com" class="text-light">info@usinvest.com</a>
             </p>
           
         </div>
+
+        <!-- Main Menu -->
         <div class="col-md-4">
           <h5 class="text-light">Menu</h5>
           <ul class="list-unstyled">
-            <li><a href="about.html" class="text-light">About</a></li>
-            <li><a href="services.html" class="text-light">Services</a></li>
-            <li><a href="blog.html" class="text-light">Blog</a></li>
-            <li><a href="faq.html" class="text-light">FAQ</a></li>
+            <li><a href="index.html"    class="text-light ">Home</a></li>
+            <li><a href="about.html"    class="text-light ">About</a></li>
+            <li><a href="services.html" class="text-light ">Services</a></li>
+            <li><a href="blog.html"     class="text-light fw-bold">Blog</a></li>
+            <li><a href="faq.html"      class="text-light ">FAQ</a></li>
           </ul>
         </div>
+
+        <!-- Legal Links -->
         <div class="col-md-4">
           <h5 class="text-light">Legal</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a></li>
-            <li><a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">Cookie Policy</a></li>
+            <li>
+              <a href="privacy.html" class="text-light ">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="terms.html" class="text-light ">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#cookieModal">
+                Cookie Policy
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+
       <div class="text-center text-light mt-4">
-        © 2025 Melbourne Capital — melbournecapital.com. All rights reserved.
+        © 2025 US Invest — usinvest.com. All rights reserved.
       </div>
     </div>
   </footer>
-
-  <!-- PRIVACY MODAL -->
-  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Privacy Policy</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" style="white-space: pre-wrap;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TERMS MODAL -->
-  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Terms of Service</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" style="white-space: pre-wrap;">
-          
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- COOKIE POLICY MODAL -->
   <div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
@@ -240,17 +298,7 @@
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const banner = document.getElementById('cookieConsent');
-      if (!localStorage.getItem('cookieConsent')) {
-        banner.style.display = 'block';
-      }
-      document.getElementById('cookieAcceptBtn').onclick = () => {
-        localStorage.setItem('cookieConsent', 'yes');
-        banner.style.display = 'none';
-      };
-    });
-  </script>
+
+  
 </body>
 </html>
